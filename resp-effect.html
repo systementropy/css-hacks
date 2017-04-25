@@ -3,50 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+	<link rel="stylesheet" href="style/hack.css">
 	<style>
-		*{
-			margin:0;padding: 0;
-		}
-		.mainCont:after{
-			display: block;
-			clear: both;
-		}
-		.boxes{
-			float: left;
-			width: 25%;
-			position: relative;
-		}
-		.botToHaveResp{
-			position: absolute;
-			bottom: 0;
-			height: 40px;
-			width: 100%;
-			transform: rotate(0deg);
-			background: rgb(0,0,0);
-			transition: all 0.4s ease-in-out;
-		}
-		.botToHaveResp:nth-child(odd){
-			opacity:0.3;
-		}
-		.botToHaveResp:nth-child(even){
-			opacity:0.7;
-		}
-		@media only screen and (max-width: 1280px) {
-			.botToHaveResp{
-				width: 40px;
-				transform: rotate(0deg);
-				border-radius: 50%;
-				right: 25px;
-				bottom: 80%;
-			}
-		}
-		@media only screen and (max-width: 780px) {
-			.botToHaveResp{
-				width: 100%;
-				border-radius: 0;
-				transform: rotate(45deg);
-			}
-		}
+		
 	</style>
 </head>
 <body>

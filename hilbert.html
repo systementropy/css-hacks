@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>Space Filling Curve with HTML5's Canvas</title>
+		
+	</head>
+	<body>
+		<script type='text/javascript' src='http://alexbeutel.com/header.js'></script>
+		<div style='float: right;text-align: right;'>
+			<h1>Space Filling Curves</h1><br />
+			</h2>Alex Beutel</h2><br />
+			</h2>CPS 102 - Duke University</h2><br />
+			</h2>September 2009</h2>
+		</div>
+		<!-- <div style='float: right; width: 200 px;'>
+			<textbox id='tb'>
+			</textbox>
+		</div> -->
+		<canvas id='c' width='500' height='225'></canvas>
+		<input type='text' id='cur_val' style='width: 100%' />
+		<div>
+			<span>Steps:</span>
+			<input type='text' id='in_steps' value='3' />
+		</div>
+		<div>
+			<span>Initial:</span>
+			<input type='text' id='in_initial' value='-LF+RFR+FL-' />
+		</div>
+		<div>
+			<span>L Replacement:</span>
+			<input type='text' id='in_L' value='+RF-LFL-FR+' />
+		</div>
+		<div>
+			<span>R Replacement:</span>
+			<input type='text' id='in_R' value='-LF+RFR+FL-' />
+		</div>
+		<input type='button' value='Go!' onclick='go();'>
+		<script type='text/javascript'>
+			function $(id) {
+				return document.getElementById(id);
+			}
+			function setSize(id, w, h) {
+				var c = document.getElementById(id);
+				c.width = w;
+				c.height = h;
+			}
+			function setOutline(id) {
+				var c = document.getElementById(id);
+				var cc = c.getContext("2d");
+				cc.strokeRect(0,0,c.width, c.height);
+			}
+			function fillSpace(str, level, id, len, newL, newR) {
+				if(level == 0) return;
+				var c = $(id);
+				var cc = c.getContext('2d');
+				c.width = c.width + 1;
+				c.width = c.width - 1;
+				cc.beginPath();
+				cc.moveTo(c.width-50, c.height-50);
+				var x = c.width-50;
+				var y = c.height-50;
+				var dir = 0;
+				var newStr = "";
+				cc.strokeStyle = "#000";
+				for(var i = 0; i < str.length; i++) {
+					var cur = str.charAt(i);
+					if(cur == '-'){
+						dir = (dir+1)%4;
+						newStr += cur;
+					} else if (cur == '+') {
+						dir = dec(dir, 3);
+						newStr += cur;
+					} else if (cur == 'F') {
+						if(dir=='0')
+							x -= len;
+						else if (dir == '1')
+							y -= len;
+						else if( dir == '2')
+							x += len;
+						else if (dir == '3')
+							y += len;
+						cc.lineTo(x,y);
+						cc.moveTo(x,y);
+						newStr += cur;
+					} else if (cur == "L") {
+						newStr += newL;
+					} else if (cur == "R") {
+						newStr += newR;
+					}
+
+				}
+				setTimeout(function(){
+					cc.strokeStyle = "#000";
+					cc.stroke();
+				},3000);
+				
+				//cc.fillText(str, 20, 20);
+				$('cur_val').value = str;
+				setTimeout("fillSpace('"+newStr+"', "+(level-1)+", '"+id+"', "+(len/2)+", '"+newL+"', '"+newR+"')", 1250);
+				
+			}
+			function dec(val, max){
+				val = val-1;
+				if( val < 0)
+					val = max;
+				return val;
+			}
+			function go() {
+				//fillSpace("-LF+RFR+FL-", 5, 'c', 200);
+				fillSpace($('in_initial').value, $('in_steps').value, 'c', 250, $('in_L').value, $('in_R').value);
+			}
+			setSize('c', 600, 600);
+			setTimeout("go()", 1500);
+		</script>
+	</body>
+</html>
