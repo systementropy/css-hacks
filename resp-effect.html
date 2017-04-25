@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin:0;padding: 0;
+		}
+		.mainCont:after{
+			display: block;
+			clear: both;
+		}
+		.boxes{
+			float: left;
+			width: 25%;
+			position: relative;
+		}
+		.botToHaveResp{
+			position: absolute;
+			bottom: 0;
+			height: 40px;
+			width: 100%;
+			transform: rotate(0deg);
+			background: rgb(0,0,0);
+			transition: all 0.4s ease-in-out;
+		}
+		.botToHaveResp:nth-child(odd){
+			opacity:0.3;
+		}
+		.botToHaveResp:nth-child(even){
+			opacity:0.7;
+		}
+		@media only screen and (max-width: 1280px) {
+			.botToHaveResp{
+				width: 40px;
+				transform: rotate(0deg);
+				border-radius: 50%;
+				right: 25px;
+				bottom: 80%;
+			}
+		}
+		@media only screen and (max-width: 780px) {
+			.botToHaveResp{
+				width: 100%;
+				border-radius: 0;
+				transform: rotate(45deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="mainCont">
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+		<div class="boxes">
+			<div class="botToHaveResp">
+				hello world
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function() {
+			var colorArr=['#00796b','#48a999','#004c40','#6a1b9a','#9c4dcc','#38006b','#424242','#6d6d6d','#1b1b1b','#007c91','#5ddef4','#00acc1'];
+			var windowHeight = $(window).height();
+			var windowWidth = $(window).width();
+			$('.boxes').css({
+				height: windowHeight/3+'px',
+			});
+			for (var i = 0; i < 12; i++) {
+				$('.boxes:eq('+i+')').css({
+					background: colorArr[i],
+				});
+			}
+		});
+		
+	</script>
+</body>
+</html>
