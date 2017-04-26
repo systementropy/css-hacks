@@ -17,16 +17,18 @@
 
 			var windowHeight = $(window).height();
 			var windowWidth = $(window).width();
-			$('.forHoverEffect').css({
-				height: windowHeight+'px',
-			});
+			// $('.forHoverEffect').css({
+			// 	height: windowHeight+'px',
+			// });
 
 			$('.forHoverEffect').on('mousemove',function(e){
 				
 				var offset = $(this).offset();
 				var relativeX = (e.pageX - offset.left);
-				
-				$(this).children('.hoverEffectCont').width(relativeX+'px');
+
+				$(this).children('.hoverEffectCont').css({
+					left: (relativeX-30)+'px',
+				});
 			})
 
 		});
