@@ -25,6 +25,44 @@
 .botToHaveResp:nth-child(even){
 	opacity:0.7;
 }
+
+/* ********************						Hover Effect: ;					***************************** */
+
+.forHoverEffect{
+	background-color: #6a1b9a;
+	position: relative;
+}
+
+.hoverEffectCont{
+	height: 40px;
+	width: 0;
+	position: absolute;
+	background-image:
+    linear-gradient(
+      to right, rgba(255,255,255,0),rgba(255,255,255,0.5)
+    );
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+	transition: all 1s ease-in-out;
+}
+
+.forHoverEffect:hover .hoverEffectCont{
+	width: 100%;
+}
+
+/*.hoverBall{
+	height: 40px;
+	width: 40px;
+	right: -20px;
+	background-color: #D9C5E5;
+	z-index: 100;
+	border-radius: 50%;
+	position: absolute;
+	display: block;
+}*/
+
+
+
 @media only screen and (max-width: 1280px) {
 	.botToHaveResp{
 		width: 40px;
