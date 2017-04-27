@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Planets</title>
+	<link rel="stylesheet" href="style/hack.css">
+</head>
+<body>
+	<div class="overCont for-solar">
+		<div class="mainCont solar-system">
+			<div class="solar-axis rotating">
+				<div class="sun"></div>
+				<div class="planet mercury"></div>
+				<div class="planet venus"></div>
+				<div class="planet earth"></div>
+				<div class="planet mars"></div>
+				<div class="planet jupiter"></div>
+				<div class="planet saturn"></div>
+				<div class="planet uranus"></div>
+				<div class="planet neptune"></div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function() {
+			var windowHeight = $(window).height();
+			var windowWidth = $(window).width();
+			$('.solar-system').css({
+				height: windowHeight+'px'
+			});
+			$('.solar-axis').css({
+				width:(windowWidth/2)+'px',
+				left: ((windowWidth/2)-20)+'px',
+				top: ((windowHeight/2)-20)+'px'
+			});
+		});
+	</script>
+</body>
+</html>
