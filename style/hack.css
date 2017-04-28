@@ -158,6 +158,7 @@
 
 
 /* ********************						SOLAR SYSTEM DISC Effect: ;					***************************** */
+.solar-disc-system.solar-system{filter: blur(0px);}
 
 @-webkit-keyframes rotating-opp {
   from {
@@ -265,13 +266,14 @@
 .disc:hover{
 	transform: scale(1.2);
 	opacity: 1;
-	border: 1px solid #000;
+	box-shadow: 1px 1px 7px 0px rgba(255,255,255,0.4);
+	border: 1px solid #FFF;
 	background: -webkit-radial-gradient(#b4b4b4, #444); 
 	background: -o-radial-gradient(#b4b4b4, #444); 
 	background: -moz-radial-gradient(#b4b4b4, #444); 
 	background: radial-gradient(#b4b4b4, #444);  
 }
-div.disc.sun{ background: #ffd700;z-index: 10}
+div.disc.sun{ background: #ffd700;z-index: 10;filter: blur(2px);opacity: 1}
 div.disc.mercury{ z-index: 9}/*background: #EDD5B1;*/
 div.disc.venus{ z-index: 8}/*background: #95551E;*/
 div.disc.earth{transform: rotate(45deg); z-index: 7}/*background: #526182;*/
@@ -290,6 +292,8 @@ span.thisPlanet {
     position: absolute;
     left: 50%;
     top: -5px;
+    border-radius: 50%;
+    filter: blur(1px);
 }
 
 
