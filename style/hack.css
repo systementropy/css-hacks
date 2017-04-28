@@ -189,27 +189,19 @@
   }
 }
 
+.rotating-opp:nth-child(0){
+  -webkit-animation: rotating 2.34s linear infinite;
+  -moz-animation: rotating 2.34s linear infinite;
+  -ms-animation: rotating 2.34s linear infinite;
+  -o-animation: rotating 2.34s linear infinite;
+  animation: rotating 2.34s linear infinite;
+}
 .rotating-opp{
-  -webkit-animation: rotating 6.0s linear infinite;
-  -moz-animation: rotating 6.0s linear infinite;
-  -ms-animation: rotating 6.0s linear infinite;
-  -o-animation: rotating 6.0s linear infinite;
-  animation: rotating 6.0s linear infinite;
-}
-.rotating-opp:nth-child(1){
-  -webkit-animation: rotating 2.4s linear infinite;
-  -moz-animation: rotating 2.4s linear infinite;
-  -ms-animation: rotating 2.4s linear infinite;
-  -o-animation: rotating 2.4s linear infinite;
-  animation: rotating 2.4s linear infinite;
-}
-
-.rotating:nth-child(9) {
-  -webkit-animation: rotating 6.5s linear infinite;
-  -moz-animation: rotating 6.5s linear infinite;
-  -ms-animation: rotating 6.5s linear infinite;
-  -o-animation: rotating 6.5s linear infinite;
-  animation: rotating 6.5s linear infinite;
+  -webkit-animation: rotating 5.4s linear infinite;
+  -moz-animation: rotating 5.4s linear infinite;
+  -ms-animation: rotating 5.4s linear infinite;
+  -o-animation: rotating 5.4s linear infinite;
+  animation: rotating 5.4s linear infinite;
 }
 
 .rotating:nth-child(1) {
@@ -264,7 +256,20 @@
 }
 
 .disc{
-	border: 1px solid #999; position: absolute;border-radius: 50%;
+	border: 1px solid #999; 
+	position: absolute;
+	border-radius: 50%;
+	opacity: 0.7;
+	transition: all 0.4s ease-in-out;
+}
+.disc:hover{
+	transform: scale(1.2);
+	opacity: 1;
+	border: 1px solid #000;
+	background: -webkit-radial-gradient(#b4b4b4, #444); 
+	background: -o-radial-gradient(#b4b4b4, #444); 
+	background: -moz-radial-gradient(#b4b4b4, #444); 
+	background: radial-gradient(#b4b4b4, #444);  
 }
 div.disc.sun{ background: #ffd700;z-index: 10}
 div.disc.mercury{ z-index: 9}/*background: #EDD5B1;*/
