@@ -101,7 +101,12 @@
   -o-animation: rotating 5s linear infinite;
   animation: rotating 5s linear infinite;
 }
-*/
+
+
+
+
+
+
 .overCont.for-solar{
 	margin:0 -4px;
 }
@@ -153,6 +158,110 @@
 
 
 /* ********************						SOLAR SYSTEM DISC Effect: ;					***************************** */
+
+@-webkit-keyframes rotating-opp {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotating-opp {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+.rotating-opp{
+  -webkit-animation: rotating 6.0s linear infinite;
+  -moz-animation: rotating 6.0s linear infinite;
+  -ms-animation: rotating 6.0s linear infinite;
+  -o-animation: rotating 6.0s linear infinite;
+  animation: rotating 6.0s linear infinite;
+}
+.rotating-opp:nth-child(1){
+  -webkit-animation: rotating 2.4s linear infinite;
+  -moz-animation: rotating 2.4s linear infinite;
+  -ms-animation: rotating 2.4s linear infinite;
+  -o-animation: rotating 2.4s linear infinite;
+  animation: rotating 2.4s linear infinite;
+}
+
+.rotating:nth-child(9) {
+  -webkit-animation: rotating 6.5s linear infinite;
+  -moz-animation: rotating 6.5s linear infinite;
+  -ms-animation: rotating 6.5s linear infinite;
+  -o-animation: rotating 6.5s linear infinite;
+  animation: rotating 6.5s linear infinite;
+}
+
+.rotating:nth-child(1) {
+  -webkit-animation: rotating 1.5s linear infinite;
+  -moz-animation: rotating 1.5s linear infinite;
+  -ms-animation: rotating 1.5s linear infinite;
+  -o-animation: rotating 1.5s linear infinite;
+  animation: rotating 1.5s linear infinite;
+}
+
+.rotating:nth-child(3) {
+  -webkit-animation: rotating 2.5s linear infinite;
+  -moz-animation: rotating 2.5s linear infinite;
+  -ms-animation: rotating 2.5s linear infinite;
+  -o-animation: rotating 2.5s linear infinite;
+  animation: rotating 2.5s linear infinite;
+}
+.rotating:nth-child(4) {
+  -webkit-animation: rotating 2.75s linear infinite;
+  -moz-animation: rotating 2.75s linear infinite;
+  -ms-animation: rotating 2.75s linear infinite;
+  -o-animation: rotating 2.75s linear infinite;
+  animation: rotating 2.75s linear infinite;
+}
+.rotating:nth-child(5) {
+  -webkit-animation: rotating 3.25s linear infinite;
+  -moz-animation: rotating 3.25s linear infinite;
+  -ms-animation: rotating 3.25s linear infinite;
+  -o-animation: rotating 3.25s linear infinite;
+  animation: rotating 3.25s linear infinite;
+}
+.rotating:nth-child(6) {
+  -webkit-animation: rotating 3.8s linear infinite;
+  -moz-animation: rotating 3.8s linear infinite;
+  -ms-animation: rotating 3.8s linear infinite;
+  -o-animation: rotating 3.8s linear infinite;
+  animation: rotating 3.8s linear infinite;
+}
+.rotating:nth-child(7) {
+  -webkit-animation: rotating 4.4s linear infinite;
+  -moz-animation: rotating 4.4s linear infinite;
+  -ms-animation: rotating 4.4s linear infinite;
+  -o-animation: rotating 4.4s linear infinite;
+  animation: rotating 4.4s linear infinite;
+}
+.rotating:nth-child(8) {
+  -webkit-animation: rotating 5s linear infinite;
+  -moz-animation: rotating 5s linear infinite;
+  -ms-animation: rotating 5s linear infinite;
+  -o-animation: rotating 5s linear infinite;
+  animation: rotating 5s linear infinite;
+}
 
 .disc{
 	border: 1px solid #999; position: absolute;border-radius: 50%;
