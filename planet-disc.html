@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Planets</title>
+	<style>
+		
+	</style>
+	<link rel="stylesheet" href="style/hack.css">
+</head>
+<body>
+	<div class="overCont for-solar">
+		<div class="mainCont solar-system">
+			<div class="disc rotating sun">
+				<span class="thisPlanet"></span>
+			</div>
+			<div class="disc rotating mercury">
+				<span class="thisPlanet"></span>
+			</div>
+			<div class="disc rotating venus">
+				<span class="thisPlanet"></span>
+			</div>
+			<div class="disc rotating earth">
+				<span class="thisPlanet"></span>
+			</div>
+			<div class="disc rotating mars">
+				<span class="thisPlanet"></span>
+			</div>
+			<div class="disc rotating jupiter">
+				<span class="thisPlanet"></span>
+			</div>
+			<div class="disc rotating saturn">
+				<span class="thisPlanet"></span>
+			</div>
+			<div class="disc rotating uranus">
+				<span class="thisPlanet"></span>
+			</div>
+			<div class="disc rotating neptune">
+				<span class="thisPlanet"></span>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function() {
+			var windowHeight = $(window).height();
+			var windowWidth = $(window).width();
+			if (windowHeight<windowWidth) {
+				windowWidth=windowHeight;
+			}else {
+				windowHeight=windowWidth;
+			}
+			$('.solar-system').css({
+				height: windowWidth+'px',
+				width: windowWidth+'px',
+			});
+
+			var centerX = windowWidth/2;
+			var centerY = windowHeight/2;
+			
+
+			$('.disc:eq(0)').css({
+				height: 100,
+				width: 100,
+				left: (centerX-50)+'px',
+				top: (centerY-50)+'px'
+			});
+
+
+			$('.disc:eq(1)').css({
+				height: windowWidth/10,
+				width: windowWidth/10,
+				left: (centerX-(windowWidth/20))+'px',
+				top: (centerY-(windowWidth/20))+'px'
+			});
+			
+			$('.disc:eq(2)').css({
+				height: windowWidth/5,
+				width: windowWidth/5,
+				left: (centerX-(windowWidth/10))+'px',
+				top: (centerY-(windowWidth/10))+'px'
+			});
+			$('.disc:eq(3)').css({
+				height: (windowWidth*3)/10,
+				width: (windowWidth*3)/10,
+				left: (centerX-((windowWidth*3)/20))+'px',
+				top: (centerY-((windowWidth*3)/20))+'px'
+			});
+			$('.disc:eq(4)').css({
+				height: (windowWidth*4)/10,
+				width: (windowWidth*4)/10,
+				left: (centerX-((windowWidth*4)/20))+'px',
+				top: (centerY-((windowWidth*4)/20))+'px'
+			});
+			$('.disc:eq(5)').css({
+				height: (windowWidth*5)/10,
+				width: (windowWidth*5)/10,
+				left: (centerX-((windowWidth*5)/20))+'px',
+				top: (centerY-((windowWidth*5)/20))+'px'
+			});
+			$('.disc:eq(6)').css({
+				height: (windowWidth*6)/10,
+				width: (windowWidth*6)/10,
+				left: (centerX-((windowWidth*6)/20))+'px',
+				top: (centerY-((windowWidth*6)/20))+'px'
+			});
+			$('.disc:eq(7)').css({
+				height: (windowWidth*7)/10,
+				width: (windowWidth*7)/10,
+				left: (centerX-((windowWidth*7)/20))+'px',
+				top: (centerY-((windowWidth*7)/20))+'px'
+			});
+			$('.disc:eq(8)').css({
+				height: (windowWidth*8)/10,
+				width: (windowWidth*8)/10,
+				left: (centerX-((windowWidth*8)/20))+'px',
+				top: (centerY-((windowWidth*8)/20))+'px'
+			});
+			// $('.solar-axis').css({
+			// 	width:(windowWidth/2)+'px',
+			// 	left: ((windowWidth/2)-10)+'px',
+			// 	top: ((windowHeight/2)-10)+'px'
+			// });
+		});
+	</script>
+</body>
+</html>
