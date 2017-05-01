@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fixing the html Component</title>
+	<style>
+		*{
+			padding: 0;
+			margin:0;
+		}
+		.appContainer{
+			height: 100vh;
+			width: 100vw;
+			background-image: linear-gradient( to top, rgba(0,0,0,0),rgba(0,0,0,0.5));
+			display: flex;
+			flex-direction: column;
+		}
+		.headerCont{
+			background: #ffd700;
+			height: 100px;
+			width: 100%;
+			filter: blur(0px);
+		}
+		.mainBodyCont{
+			flex: 1;
+			background: #F5F5F6;
+			display: flex;
+		}
+		.sidebarCont{
+			background: #333;
+			width: 80px;
+		}
+		.mainCont{
+			background: #EEE;
+			opacity: 0.3;
+			flex: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="appContainer">
+		<div class="headerCont"></div>
+		<div class="mainBodyCont">
+			<div class="sidebarCont"></div>
+			<div class="mainCont">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
