@@ -327,7 +327,9 @@ div.disc.neptune .thisPlanet{background: #78A3E7;}
 
 /* ********************           FLEX Box usage and static element without using position fixed         ***************************** */
 
-
+body{
+  overflow: hidden;
+}
 *{
   padding: 0;
   margin:0;
@@ -355,7 +357,7 @@ div.disc.neptune .thisPlanet{background: #78A3E7;}
   width: 80px;
 }
 .mainCont{
-  background: #EEE;
-  opacity: 0.3;
+  background: inherit;
   flex: 1;
+  overflow-y: scroll;
 }
