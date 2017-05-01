@@ -355,6 +355,7 @@ div.disc.neptune .thisPlanet{background: #78A3E7;}
   width: 80px;
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 .mainCont{
   flex: 1;
@@ -397,10 +398,11 @@ div.disc.neptune .thisPlanet{background: #78A3E7;}
 .side-opt button {
     height: 100%;
     width: 100%;
-    background: transparent;
+    background: #333;
     border: none;
     color: #F5F5F6;
     transform: scale(1);
+    z-index: 1;
     transition: all 0.4s ease-in-out;
 }
 .side-opt button:hover{
@@ -408,15 +410,19 @@ div.disc.neptune .thisPlanet{background: #78A3E7;}
 }
 
 .moreOptCont{
-  position: absolute;
-  right: -100%;
-  height: 700%;
+  position: fixed;
+  top: 100px;
   background: #EEE;
-  z-index: 100;
-  display: none;
+  z-index: -1;
+  height: 100vh;
+  width: 280px;
+  left: -200px;
+  transition: all 0.4s ease-in-out;
 }
 .side-opt:hover .moreOptCont{
-  display: block;
+  
+  left: 80px;
+
 }
 .moreOptCont ul{display: flex;flex-direction: column;height: 100%}
 .moreOptCont ul>li{flex:1;}
