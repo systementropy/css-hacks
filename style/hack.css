@@ -382,12 +382,14 @@ body{
   background: transparent;
   transform: scale(1);
   transition: all 0.4s ease-in-out;
+  filter: grayscale(100%);
+  display: flex;
 }
 .grid-elt:hover{
-  
+  filter: grayscale(0%);
   transform: scale(1.05);
 }
-
+.grid-elt img{max-width: 100%;max-height: 100%;margin:auto;}
 
 
 
